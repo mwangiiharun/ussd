@@ -19,11 +19,10 @@ public class UssdController {
 
 
     @RequestMapping(method = RequestMethod.GET, value = "/ussd", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<HashMap<String, Object>> processUssd (@RequestParam (required = false) Map<String, String> params){
-        HashMap<String, Object> response= new HashMap<>();
+    public ResponseEntity<String> processUssd (@RequestParam (required = false) Map<String, String> params){
+
         logger.info(params);
-        response.put("Status", true);
-        response.put("Message", "Success");
+        String response="END Test works";
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
