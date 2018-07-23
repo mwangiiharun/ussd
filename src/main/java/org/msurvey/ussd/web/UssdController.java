@@ -22,7 +22,7 @@ public class UssdController {
     public ResponseEntity<String> processUssd (@RequestParam (required = false) Map<String, String> params){
 
         logger.info(params);
-        String response="END Test works";
+        String response="END Test works. Powered by Msurvey ";
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
